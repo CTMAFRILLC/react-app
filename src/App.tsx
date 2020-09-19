@@ -16,6 +16,7 @@ import Preview from './pages/Preview';
 import TourSite from './pages/TourSite';
 import Subscription from './pages/Subscription';
 import SetupPayments from './pages/SetupPayments';
+import VrScreen from './pages/VrScreen';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path='/tour-site' component={TourSite} />
       <Route path='/subscription' component={Subscription} />
       <Route path='/setup-payments' component={SetupPayments} />
+      <Route path='/vr-screen' component={VrScreen} />
     </>
 
 
