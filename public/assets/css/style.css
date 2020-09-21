@@ -27,7 +27,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #212121;
+  color: #eeeeee;
+  font-family: "Nunito", sans-serif;
 
+}
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -56,9 +61,11 @@ a:hover {
 
 section#sa_container {
   position: relative;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
-
+.sa-btn-br-0{
+  border-radius: 0 !important;
+}
 header {
   position: relative;
   padding: 1rem 0;
@@ -128,18 +135,21 @@ header .sa-nav-links li {
   background-color: #373737;
   border-radius: 15px;
   box-shadow: 8px 16px 32px #0000001a;
+  overflow: hidden;
 }
 
 .sa-signup .sa-wrapper {
   position: relative;
-  padding: 2rem 5rem;
+  padding: 2rem 5rem ;
 }
 
 .sa-wrapper .sa-col-left {
   position: relative;
   padding: 0;
 }
-
+/* .sa-signup .sa-col-left{
+  padding: 2rem 1rem 2rem 5rem ;
+} */
 .SA-txt1 {
   font-size: 22px;
   color: #eeeeee;
@@ -772,6 +782,11 @@ h4.SA-tour-name {
   font-family: StdBold;
   margin-left: 10px;
 }
+.sa-btn-fade{
+  background-color: #212121 !important;
+  color: #F2F3F7 !important;
+  text-transform: unset !important;
+}
 
 .SA-tour-header {
   color: white;
@@ -966,18 +981,25 @@ a.sa-desc-tablinks.active::after {
 }
 
 
+.sa-dashboard-main .sa-preview-carousel .carousel-cell ,
 .sa-explore .sa-preview-carousel .carousel-cell {
   top: 0 !important;
   background-color: transparent !important;
   overflow: unset;
   box-shadow: unset;
 }
+.sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer{
+  height: 250px !important;
+  overflow: hidden;
+}
 
 .sa-explore .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer {
   height: 300px !important;
   overflow: hidden;
 }
-
+.sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img{
+  min-height: 250px !important;
+}
 .sa-explore .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img {
   min-height: 300px !important;
 }
@@ -1121,10 +1143,14 @@ a.sa-desc-tablinks.active::after {
 .sa-preview-carousel .flickity-button.flickity-prev-next-button.previous::before {
   background: transparent url("../icons/png/RightArrow_Big.png") 0% 0% no-repeat padding-box;
   transform: rotate(180deg);
+  background-position: center;
+    background-size: contain;
 }
 
 .sa-preview-carousel .flickity-button.flickity-prev-next-button.next::before {
   background: transparent url("../icons/png/RightArrow_Big.png") 0% 0% no-repeat padding-box;
+  background-position: center;
+    background-size: contain;
 }
 
 .flickity-button-icon {
@@ -1220,17 +1246,24 @@ a.sa-desc-tablinks.active::after {
 .sa-dashboard-main .sa-toursite-desc {
   margin-top: 1rem;
 }
-
-.sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .carousel-cell {
-  height: 160px !important;
+.sa-dashboard-main .sa-preview-carousel .flickity-prev-next-button.next{
+  right: 0;
 }
-
-.sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer {
-  height: 160px;
+.sa-dashboard-main .flickity-prev-next-button{
+  width: 35px;
+  height: 30px;
+  top: 35%;
+  transform: translateY(-35%);
+  /* height: 35px; */
 }
-
-.sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img {
-  min-height: 160px;
+.sa-dashboard-main .sa-preview-carousel{
+  padding-right: 35px;
+}
+.sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .flickity-viewport{
+  height: 360px !important;
+}
+.sa-dashboard-main .sa-explore-courousel-details p{
+  font: 14px StdBook;
 }
 
 .sa-dashboard-inputfield {
@@ -1244,7 +1277,7 @@ a.sa-desc-tablinks.active::after {
 .sa-dashboard-inputfield p {
   color: #EEEEEE;
   font-size: 16px;
-  text-transform: capitalize;
+  text-transform: unset;
   font-family: StdMedium;
 }
 
@@ -1277,4 +1310,148 @@ a.sa-desc-tablinks.active::after {
   text-transform: uppercase;
   font-family: StdBook;
   font-size: 16px;
+}
+
+body .modal-dialog{
+  height: calc(100% - (2 * (1.75rem)));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body .modal-content{
+  background-color: #000000;
+  border: none;
+  border-radius: 0 !important;
+}
+body .modal-header{
+  border: none;
+  border-radius: 0 !important;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+body .modal-body{
+  padding: 1.5rem 5rem;
+}
+.modal-body .sa-modal-imgContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body button.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: none;
+}
+body .modal-footer{
+  border: none;
+  padding: 0 5rem 3rem;
+  border-radius: 0 !important;
+}
+
+body .modal-title{
+  font: 18px StdBlack;
+letter-spacing: 0.12px;
+color: #EEEEEE;
+}
+
+.sa-inputfield {
+  display: block;
+  width: 100%;
+  background-color: #212121;
+  border: none;
+  outline: none;
+  font-family: StdBook;
+  color: #eeeeee;
+  height: 50px;
+  padding: 0.375rem 0.75rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 15px;
+}
+/* 
+.plyr--video .plyr__controls{
+  padding: 2rem 2rem 1rem;
+}
+*/ .plyr__control:hover,
+.plyr__control--overlaid,
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true]{
+  background-color: #34FFC8 !important;
+  outline: none;
+} 
+
+.plyr--full-ui input[type=range]{
+  color: #34FFC8 !important;
+}
+/*
+.plyr__progress{
+  left: 2rem;
+  right: 5rem;
+  position: absolute;
+  top: 0;
+}
+.plyr--video .plyr__time {
+  text-shadow: 0 1px 1px rgba(0,0,0,.15);
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.sa-plyr__actions{
+  display: inline;
+    position: absolute;
+    bottom: 7.5rem;
+    left: 70px;
+    z-index: 99;
+} */
+
+.plyr__poster::before{
+  content: '';
+  position: absolute;
+}
+
+.sa-vr-screen{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  background-color: #000;
+}
+
+.sa-header-fade{
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+}
+
+body:hover .sa-header-fade{
+ opacity: 1;
+}
+
+/* .sa-col-signup-image{
+  background-image: url('../images/GirlVR.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+} */
+
+
+.audioAkwaba{
+  display: none !important;
 }

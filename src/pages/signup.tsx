@@ -1,21 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Header from '../components/Layout/Header'
+import Footer from '../components/Layout/Footer'
+
 
 export default function signup() {
     return (
         <section id="sa_container">
-  <div className="container">
-    {/* headeing Navigation */}
-    <header className="col-12 sa-header">
-      <div className="row align-items-center justify-content-between">
-        <div>
-          <img src="assets/icons/png/Logo Placement.png" className="sa-logo"/>
-        </div>
-        <div>
-          <a href="signin.html" className="btn sa-btn">sign in</a>
-        </div>
-      </div>
-    </header>
-  </div>
+          <Header />
   {/* Main Content */}
   <main className="container">
     <div className="col-12">
@@ -27,7 +19,7 @@ export default function signup() {
                 <h3 className="SA-txt1">Create an Account</h3>
                 <h4 className="SA-txt2">
                   Already A User?
-                  <a href="signin.html" className="SA-txt3"> Sign in</a>
+                  <Link to={"sign-in"} className="SA-txt3"> Sign in</Link>
                 </h4>
               </div>
               <div>
@@ -62,28 +54,16 @@ export default function signup() {
               </div>
             </div>
             <div className="col-md-6 sa-col-right">
-              <a className="sa-icon-close" href="#">
-                <img src="assets/icons/png/Circle Button.png"  />
-              </a>
-              <img src="assets/icons/png/image.png" className="SA-image" />
+              <Link to={"/"} className="sa-icon-close">
+                <img src="assets/icons/png/Circle Button.png" alt="" />
+              </Link>
+              <img src="assets/icons/png/image.png" className="SA-image" alt=""/>
             </div>
           </div>
         </div>
       </div>
     </div>
-    {/* Botton Navigation */}
-    <nav className="sa-nav">
-      <div className="d-flex align-items-center justify-content-between">
-        <ul className="sa-nav-links d-flex">
-          <li className="sa-nav-link"><a href="#">support</a></li>
-          <li className="sa-nav-link"><a href="#">about</a></li>
-          <li className="sa-nav-link"><a href="#">credits</a></li>
-        </ul>
-        <div className="sav-nav-volume">
-          <a href="#"><img src="assets/icons/png/Volume.png" /></a>
-        </div>
-      </div>
-    </nav>
+    <Footer />
   </main>
 </section>
 
