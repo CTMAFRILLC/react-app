@@ -15,6 +15,7 @@ import TourSite from './pages/TourSite';
 import Subscription from './pages/Subscription';
 import SetupPayments from './pages/SetupPayments';
 import VrScreen from './pages/VrScreen';
+import Pages from './pages/pages';
 
 const BaseRouter = () => (
     <Switch>
@@ -33,6 +34,7 @@ const BaseRouter = () => (
       <Route path='/subscription' component={Subscription} />
       <Route path='/setup-payments' component={SetupPayments} />
       <Route path='/vr-screen' component={VrScreen} />
+      <Route path='/pages' component={Pages} />
     </Switch>
   );
 export default BaseRouter;

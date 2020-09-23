@@ -17,7 +17,7 @@ function Inbox() {
         </div>
         <div>
           <div className="sa-header-imgContainer">
-            <a href="dashboard.html"><img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/s53-ae-num-009656545000.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d39e0cd4a19eb5c941a940c25efc8caf" className=" img-circle" /></a></div>
+            <a href="dashboard.html"><img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/s53-ae-num-009656545000.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d39e0cd4a19eb5c941a940c25efc8caf" className=" img-circle" alt=""/></a></div>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@ function Inbox() {
               <div className="py-5" />
               <div className="py-5" />
             </div>
-            <li><a href="#"><img src="assets/icons/svg/signout.svg" /> sign out</a></li>
+            <li><a href="#"><img src="assets/icons/svg/signout.svg" alt="" /> sign out</a></li>
           </ul>
         </nav>
       </aside>
